@@ -7,9 +7,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
             .map(
                 (user) =>
                 `<div>
-                    <p>User Id=> ${user.id}</p>
-                    <div>User Name=> ${user.name}</div>
-                    <div>E-mail=> ${user.email}</div>
+                <div id = "user-card">
+                
+                    <button id = "btnMore" onclick= "getElementById('userInfo').innerHTML='ID: ${user.id}<br> user name: ${user.name}<br> user email ${user.email} <br>    '">Details</button>
+                    
+            </div>
                   </div>`
             )
             .join("");

@@ -122,7 +122,7 @@ fetch("https://jsonplaceholder.typicode.com/users").then(function (response) {
   return response.json();
 }).then(function (userData) {
   document.getElementById("person").innerHTML = userData.map(function (user) {
-    return "<div>\n                    <p>User Id=> ".concat(user.id, "</p>\n                    <div>User Name=> ").concat(user.name, "</div>\n                    <div>E-mail=> ").concat(user.email, "</div>\n                  </div>");
+    return "<div>\n                <div id = \"user-card\">\n                \n                    <button id = \"btnMore\" onclick= \"getElementById('userInfo').innerHTML='ID: ".concat(user.id, "<br> user name: ").concat(user.name, "<br> user email ").concat(user.email, " <br>    '\">Details</button>\n                    \n            </div>\n                  </div>");
   }).join("");
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -153,7 +153,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53715" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53878" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
