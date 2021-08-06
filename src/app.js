@@ -8,8 +8,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
                 (user) =>
                 `<div>
                 <div id = "user-card">
-                
-                    <button id = "btnMore" onclick= "getElementById('userInfo').innerHTML='ID: ${user.id}<br> user name: ${user.name}<br> user email ${user.email} <br>    '">Details</button>
+                 
+                 <div class='user-name'> ${user.username} </div>
+                 <div class="user-email">${user.email}</div>
+                    <button id = "btnMore" onclick= "getElementById('userInfo').innerHTML='ID: ${user.id}<br> user address: ${user.address.street}<br> user website ${user.website} <br>'">Details</button>
+                    
                     
             </div>
                   </div>`
